@@ -1,0 +1,77 @@
+<!DOCTYPE html><html lang="en">
+<head>   <meta charset="utf-8" />   
+
+<title>Lexical Analysis </title>      <!-- Importing bootstrap thing -->  
+</head>
+	<body bgcolor = "lightgray" style="background-image: url('https://wallpaperscraft.com/image/easter_eggs_eyes_emotions_108042_1680x1050.jpg'); background-image: 1380px 850px;">
+		<script src='static/Chart.min.js'></script>   
+		<meta name="viewport" content="width=device-width, initial-scale=1">        
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<div class="jumbotron">
+	        <div class="container">
+				
+				<div id = "name" align="center">
+					<h1 > Lexical Analysis</h1> 
+					<h2 style="color:yellow;"> {{ line }}  </h2> <!-- bar chart canvas element -->
+					<canvas id="chart" width="600" height="400"></canvas>
+				</div>
+				<script>
+	   				// bar chart data
+				    var barData = 
+				    {
+					    labels : 
+					    [
+					    	{% for item in list[0]['tones'] %}
+					                  	"{{item['tone_name']}}",
+					              {% endfor %}
+					    ],
+					    datasets : 
+					    [
+					       {
+					            fillColor: "rgba(61,207,55,0.66)",
+					            strokeColor: "rgba(121,117,15,1)",
+					            pointColor: "rgba(131,117,215,1)",
+					         	data : 
+					         	[
+					         		{% for item in list[0]['tones'] %}
+					                      	{{item['score']}},
+					                    {% endfor %}
+					            ]
+					       }
+					    ]
+				    }
+	 
+				   // get bar chart canvas
+				   var mychart = document.getElementById("chart").getContext("2d");
+				   steps = 0.1
+				   max = 1
+				   // draw bar chart
+				   new Chart(mychart).Bar(barData, {
+				        scaleOverride: true,
+				        scaleSteps: steps,
+				        scaleStepWidth: Math.ceil(max / steps),
+				        scaleStartValue: 0,
+				        scaleShowVerticalLines: true,
+				        scaleShowGridLines : true,
+				        barShowStroke : true,
+				        scaleShowLabels: true
+				   });
+				</script>
+				<style>
+					#name
+					{
+	 
+					}
+					#chart
+					{
+						background-color:lightblue;
+						opacity:0.7
+					}
+				</style>
+			</div>
+		</div>
+	</body>
+</html>
+

@@ -1,0 +1,52 @@
+<html><head>
+    <title>Lexical Analysis</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="cover">
+      <div class="navbar">
+        <div class="container">
+          <div class="navbar-header navbar-right">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+            </button>
+            <a class="navbar-brand text-inverse" href="#">
+              <span> Powered by IBM Watson  <img src="https://www.ibm.com/blogs/bluemix/wp-content/uploads/2014/10/watsonLogo.png" style="height: 60px; border-radius: 30px; width:60px;  border-style: none; border-width: 1px;"></span>
+            </a>
+          </div>
+          <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav navbar-right"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="cover-image" style="background-image: url('http://games.ucla.edu/wp-content/uploads/2012/02/hiddeninplainsight_screenshot3.jpg')"></div>
+      <div class="container">
+        <div class="row" >
+          <div class="col-md-offset-0 col-md-11 text-center" style="background-color: rgba(0,0,0,0.4);">
+            <h1 class="text-muted" style="color: rgba(100,255,255,255);"><strong>Lexical Analysis  </strong></h1>
+            <p style="color: white;"><strong>Place the text below : </strong></p>
+            <br>
+            <div class="form-group text-center">
+              <form action="/senti" method = "POST">
+                <textarea class="form-control" rows="5" id="data" name="data"></textarea>
+                <br/>
+                <br/>
+                <button class="btn btn-lg btn-primary col-md-offset-0 col-md-1.5 text-center fa fa-arrow-circle-right"> Analyse</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>
